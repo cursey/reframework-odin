@@ -91,7 +91,7 @@ TDBTypeDefinition :: struct {
     get_num_fields : proc "c" (td : TypeDefinitionHandle) -> c.uint,
     get_num_properties : proc "c" (td : TypeDefinitionHandle) -> c.uint,
 
-    is_derived_from : proc "c" (td : TypeDefinitionHandle, base : rawptr) -> bool,
+    is_derived_from : proc "c" (td : TypeDefinitionHandle, base : TypeDefinitionHandle) -> bool,
     is_derived_from_by_name : proc "c" (td : TypeDefinitionHandle, base : cstring) -> bool,
     is_value_type : proc "c" (td : TypeDefinitionHandle) -> bool,
     is_enum : proc "c" (td : TypeDefinitionHandle) -> bool,
