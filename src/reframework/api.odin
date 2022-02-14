@@ -43,7 +43,7 @@ ReflectionMethodHandle :: distinct rawptr
 InvokeMethod :: proc "c" (stack_frame : rawptr, ctx : rawptr)
 ReflectionPropertyMethod :: proc "c" (rp : ReflectionPropertyHandle, obj : ManagedObjectHandle, out_data : rawptr) -> rawptr
 REFPreHookFn :: proc "c" (argc : c.int, argv : [^]rawptr, arg_tys : [^]TypeDefinitionHandle) -> PreHookResult
-REFPostHookFn :: proc "c" (ret_val : rawptr, ret_ty : TypeDefinitionHandle)
+REFPostHookFn :: proc "c" (ret_val : ^rawptr, ret_ty : TypeDefinitionHandle)
 
 PluginVersion :: struct {
     major : c.int,
